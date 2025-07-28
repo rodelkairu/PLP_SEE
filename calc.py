@@ -12,4 +12,3 @@ if num2 != 0:
     print("The quotient is:", division)
 else:
     print("Cannot divide by zero!")
-# 🎉 You've just created a mini-calculator! Keep having fun with your coding    !
