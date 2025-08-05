@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quiz Game</title>
+</head>
+<body>
+  <script>
+    function runQuiz() {
+      let questions = [
+        {
+          question: "What is the capital of France?",
+          options: ["Berlin", "London", "Paris", "Madrid"],
+          answer: "3"
+        },
+        {
+          question: "Which language runs in the browser?",
+          options: ["Python", "JavaScript", "C++", "Java"],
+          answer: "2"
+        }
+      ];
+
+      let score = 0;
+
+      for (let i = 0; i < questions.length; i++) {
+        let q = questions[i];
+        let userAnswer = prompt(
+          `Q${i + 1}: ${q.question}\n` +
+          `1. ${q.options[0]}\n` +
+          `2. ${q.options[1]}\n` +
+          `3. ${q.options[2]}\n` +
+          `4. ${q.options[3]}\n` +
+          "Enter your answer (1-4):"
+        );
+
+        if (userAnswer === q.answer) {
+          alert("✅ Correct!");
+          score++;
+        } else {
+          alert(`❌ Wrong! Correct answer was: ${q.options[q.answer - 1]}`);
+        }
+      }
+
+      alert(`🎯 You scored ${score} out of ${questions.length}`);
+    }
+
+    runQuiz(); // Start the quiz immediately when the page loads
+  </script>
+</body>
+</html>
